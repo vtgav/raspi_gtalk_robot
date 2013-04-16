@@ -115,7 +115,11 @@ class RaspiBot(GtalkRobot):
             print line,
         retval = p.wait()
         self.replyMessage(user, output +" at: "+time.strftime("%Y-%m-%d %a %H:%M:%S", time.localtime()))
-    
+        
+     #This executes a pi scan
+    def command_003_scan(self, user, message, args):
+        '''(scan)'''
+        self.replyMessage(user, "scan at: "+time.strftime("%Y-%m-%d %a %H:%M:%S", time.localtime()))   
     #This method is the default response
     def command_100_default(self, user, message, args):
         '''.*?(?s)(?m)'''
