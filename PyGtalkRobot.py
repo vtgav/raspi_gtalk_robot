@@ -93,7 +93,7 @@ class GtalkRobot:
         return self.show, self.status
 
     def replyMessage(self, user, message):
-        self.conn.send(xmpp.Message(user, message))
+        self.conn.send(xmpp.Message(user, message, typ = 'chat'))
 
     def getRoster(self):
         return self.conn.getRoster()
